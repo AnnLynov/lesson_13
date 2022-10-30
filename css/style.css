@@ -1,0 +1,280 @@
+@import url("reset.css");
+.wrapper {
+   margin: 0 auto;
+}
+.main {
+   width: 100%;
+   max-height: 600px;
+   background: url("../img/polyanka.jpg") 50px repeat-x;
+}
+.main__content {
+   margin: 0 0 0 90px;
+}
+.side {
+   width: 100px;
+   position: relative;
+}
+.side__item div {
+   position: absolute;
+}
+.side__item div:nth-child(1) {
+   width: 50px;
+   height: 50px;
+   border-radius: 50%;
+   background-color: rgb(146, 104, 74);
+   z-index: 2;
+}
+.side__item div:nth-child(2) {
+   width: 50px;
+   height: 50px;
+   border-radius: 50%;
+   background-color: rgb(146, 104, 74);
+   z-index: 2;
+}
+.side__item div:nth-child(3) {
+   width: 50px;
+   height: 100px;
+   border-radius:100% 0% 90% 10% / 89% 0% 100% 11% ;
+   background-color: rgb(193, 145, 110);
+   transform: rotate(-10deg);
+}
+.side__item:nth-of-type(1) div:nth-child(1){
+   top: 30px;
+   left: 10px;
+}
+.side__item:nth-of-type(1) div:nth-child(2){
+   top: 30px;
+   right: 0;
+}
+.side__item:nth-of-type(1) div:nth-child(3){
+   top: 45px;
+   left: 30px;
+}
+.side__item:nth-of-type(2) div:nth-child(1){
+   top: 160px;
+   left: 10px;
+}
+.side__item:nth-of-type(2) div:nth-child(2){
+   top: 160px;
+   right: 0;
+}
+.side__item:nth-of-type(2) div:nth-child(3){
+   top: 180px;
+   left: 30px;
+}
+.side__item:nth-of-type(3) div:nth-child(1){
+   top: 290px;
+   left: 10px;
+}
+.side__item:nth-of-type(3) div:nth-child(2){
+   top: 290px;
+   right: 0;
+}
+.side__item:nth-of-type(3) div:nth-child(3){
+   top: 320px;
+   left: 30px;
+}
+.side__item:nth-of-type(4) div:nth-child(1){
+   top: 450px;
+   left: 10px;
+}
+.side__item:nth-of-type(4) div:nth-child(2){
+   top: 450px;
+   right: 0;
+}
+.side__item:nth-of-type(4) div:nth-child(3){
+   top: 480px;
+   left: 30px;
+}
+.car {
+   height: 600px;
+   position: relative;
+   top: 0;
+   left: 1200px;
+   animation: car 10s linear 1 normal running 0s forwards;
+}
+.car div:nth-child(1) {
+   width: 200px;
+   height: 200px;
+   border-radius: 50%;
+   background-color: rgb(146, 104, 74);
+}
+.car div:nth-child(2) {
+   width: 200px;
+   height: 200px;
+   border-radius: 50%;
+   background-color: rgb(103, 73, 51);
+}
+.car div:nth-child(3) {
+   width: 400px;
+   height: 200px;
+   border-radius: 50%;
+   border-radius:100% 0% 90% 10% / 89% 0% 100% 11% ;
+   background-color: rgb(193, 145, 110);
+}
+.car div {
+   position: absolute;  
+}
+.car div:nth-child(1){
+   bottom: 0;
+   left: 0px;
+   z-index: 6;
+}
+.car div:nth-child(2){
+   bottom: 40px;
+   left: -50px;
+   z-index: 4;
+}
+.car div:nth-child(3){
+   transform: rotate(15deg);
+   bottom: 30px;
+   left: -300px;
+   z-index: 5;
+   overflow: hidden;
+}
+.car div:nth-child(3)::before {
+   content: "";
+   display: inline-block;
+   width: 400px;
+   height: 200px;
+   transform: rotate(-20deg);
+   background: url("../img/smile.jpg") 50px 10px / 300px 200px no-repeat;
+   opacity: 0;
+}
+.car div:nth-child(3):hover:before {
+   opacity: 1;
+   transition: opacity 3s ease 1s;
+}
+.sun {
+   width: 300px;
+   height: 300px;
+   position: absolute;
+   right: 400px;
+}
+.sun img {
+   width: 100%;
+}
+.sun:hover {
+   transform: rotate(180deg);
+}
+.sun::before {
+   content: "Лечу к тебе!";
+   display: inline-block;
+   width: 200px;
+   height: 200px;
+   position: absolute;
+   font-size: 40px;
+   font-weight: 700;
+   background-color: blueviolet;
+   padding: 20px 0 0 10px ;
+   border-radius: 20px;
+   top: 20px;
+   left: -190px;
+   animation: letter 3s 1 normal 8s linear;
+   opacity: 0;
+}
+@keyframes letter {
+   0% {
+      opacity: 0;
+   }
+   100% {
+      opacity: 1;
+   }
+}
+@keyframes car {
+   0% {
+      transform: translate(0);
+   }
+   50% {
+      transform: translate(-500px);
+      animation-play-state: paused;
+   }
+   90% {
+      transform: translate(-500px);
+      animation-play-state: paused;
+   }
+   100% {
+      transform: translate(-2000px);
+   }
+}
+.side__item:nth-of-type(1) {
+   animation: item-1 3s infinite normal linear;
+}
+.side__item:nth-of-type(2) {
+   animation: item-2 3s infinite normal 3s linear;
+}
+.side__item:nth-of-type(3) {
+   animation: item-3 3s infinite normal 6s linear;
+}
+.side__item:nth-of-type(4) {
+   animation: item-4 3s infinite normal 9s linear;
+}
+@keyframes item-1 {
+   0% {
+      transform: rotate(0deg);
+   }
+   25% {
+      transform: rotate(20deg);
+   }
+   50% {
+      transform: rotate(0deg);
+   }
+   75% {
+      transform: rotate(-20deg);
+   }
+   100% {
+      transform: rotate(0deg);
+   }
+}
+@keyframes item-2 {
+   0% {
+      transform: rotate(0deg);
+   }
+   25% {
+      transform: rotate(20deg);
+   }
+   50% {
+      transform: rotate(0deg);
+   }
+   75% {
+      transform: rotate(-20deg);
+   }
+   100% {
+      transform: rotate(0deg);
+   }
+}
+
+@keyframes item-3 {
+   0% {
+      transform: rotate(0deg);
+   }
+   25% {
+      transform: rotate(20deg);
+   }
+   50% {
+      transform: rotate(0deg);
+   }
+   75% {
+      transform: rotate(-20deg);
+   }
+   100% {
+      transform: rotate(0deg);
+   }
+}
+@keyframes item-4 {
+   0% {
+      transform: rotate(0deg);
+   }
+   25% {
+      transform: rotate(20deg);
+   }
+   50% {
+      transform: rotate(0deg);
+   }
+   75% {
+      transform: rotate(-20deg);
+   }
+   100% {
+      transform: rotate(0deg);
+   }
+}
